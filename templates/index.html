@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ContextAI - Smart Chatbot</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+
+    <div class="app-container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="brand">
+                <div class="brand-icon">✦</div>
+                <h2>ContextAI</h2>
+            </div>
+
+            <button class="new-chat-btn" id="newChatBtn">
+                + New Chat
+            </button>
+
+            <div class="sidebar-info">
+                <p>YOUR AI COMPANION</p>
+                <div class="info-card">
+                    <span>✧</span>
+                    <div>
+                        <strong>Context-aware AI</strong>
+                        <small>Conversations that remember</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-footer">
+                <span class="status-dot"></span>
+                Gemini AI Connected
+            </div>
+
+        </aside>
+
+
+        <!-- Main Chat Area -->
+        <main class="main-content">
+
+            <header class="topbar">
+                <div>
+                    <h3>AI Assistant</h3>
+                    <p>Your intelligent learning companion</p>
+                </div>
+
+                <div class="model-label">
+                    ✦ Gemini
+                </div>
+            </header>
+
+
+            <!-- Chat Messages -->
+            <section class="chat-area" id="chatArea">
+
+                <div class="welcome-screen" id="welcomeScreen">
+
+                    <div class="welcome-icon">✦</div>
+
+                    <h1>What can I help you with?</h1>
+
+                    <p>
+                        Ask questions, explore ideas, or learn
+                        something new. I'm here to help!
+                    </p>
+
+                    <div class="suggestions">
+
+                        <button class="suggestion"
+                                data-message="Explain Generative AI in simple words.">
+                            <span>✧</span>
+                            Explain Generative AI
+                        </button>
+
+                        <button class="suggestion"
+                                data-message="Teach me Python programming basics.">
+                            <span>⌘</span>
+                            Learn Python
+                        </button>
+
+                        <button class="suggestion"
+                                data-message="What is Machine Learning?">
+                            <span>◈</span>
+                            Understand Machine Learning
+                        </button>
+
+                        <button class="suggestion"
+                                data-message="Give me some interesting project ideas for CSE students.">
+                            <span>✦</span>
+                            Explore project ideas
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Message Input -->
+            <footer class="input-section">
+
+                <form id="chatForm" class="chat-form">
+
+                    <textarea
+                        id="messageInput"
+                        placeholder="Message ContextAI..."
+                        rows="1"
+                        required
+                    ></textarea>
+
+                    <button type="submit"
+                            id="sendBtn"
+                            class="send-btn"
+                            aria-label="Send message">
+                        ↑
+                    </button>
+
+                </form>
+
+                <p class="disclaimer">
+                    ContextAI can make mistakes. Verify important information.
+                </p>
+
+            </footer>
+
+        </main>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
